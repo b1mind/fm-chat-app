@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
   --clr: #ce41ff;
   --clr-two: #933afe;
-  --clr-two-dark: #3a3838;
+  --clr-two-dark: #492c66;
+  --clr-two-gray: #ede5f4;
   --clr-white: #ffffff;
   --clr-gray: #fafafa;
+  --clr-dark-gray: #f5f3f8;
   --clr-black: #1b1b1b;
 }
 
@@ -16,7 +18,7 @@
 }
 
 html {
-  min-height: 100%;
+  height: 100%;
 }
 
 body {

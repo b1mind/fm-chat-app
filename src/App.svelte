@@ -47,11 +47,11 @@
 
     &::after {
       content: '';
-      width: 450px;
+      position: absolute;
+      width: 500px;
       height: 800px;
       bottom: 0;
-      right: 0;
-      position: absolute;
+      right: -75px;
       border-radius: 400px 400px 0 0;
       opacity: 0.03;
       background: var(--clr);
@@ -65,17 +65,30 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     place-content: center;
+
     &-text {
-      width: 50ch;
+      max-width: 45ch;
       justify-self: flex-end;
       align-self: center;
       font-size: 1.05rem;
     }
+
+    @media (max-width: 970px) {
+      width: 100%;
+      padding: 1rem;
+      grid-template-columns: 1fr;
+      place-items: center;
+    }
   }
 
   h1 {
+    color: var(--clr-two-dark);
     font-size: 2.75rem;
     font-weight: 600;
+  }
+
+  p {
+    color: #9d9d9d;
   }
 
   //< end me
