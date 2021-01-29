@@ -1,6 +1,7 @@
 <script>
   import User from './User.svelte'
   import Chat from './Chat.svelte'
+  import { afterUpdate } from 'svelte'
 
   let msgs = [
     {
@@ -29,6 +30,32 @@
       msg: '',
     },
   ]
+
+  let inputValue
+  let chatMsgs
+  let chatBody
+
+  function userInput(e) {
+    if (!inputValue) return
+
+    let msg = {
+      user: true,
+      img: false,
+      imgs: [],
+      option: false,
+      msg: inputValue,
+    }
+
+    msgs = [...msgs, msg]
+    inputValue = ''
+  }
+
+  afterUpdate(() => {
+    chatBody.scrollTo(0, 999999)
+  })
+
+  $: msgs
+  $: chatMsgs
 </script>
 
 <div class="phone-wrap">
@@ -37,8 +64,9 @@
       <User />
     </div>
 
-    <div class="chat-body">
-      <div class="chat-messages">
+    <div class="chat-body" bind:this={chatBody}>
+      <div class="chat-messages" bind:this={chatMsgs}>
+        <b />
         {#each msgs as msg}
           <Chat user={msg.user} img={msg.img} imgs={msg.imgs} option={msg.option}>
             {msg.msg}
@@ -47,9 +75,9 @@
       </div>
     </div>
     <div class="chat-input">
-      <input type="text" placeholder="type a message" />
+      <input type="text" placeholder="type a message" bind:value={inputValue} />
 
-      <b>&gt;</b>
+      <b on:click={userInput}>&gt;</b>
     </div>
   </div>
 </div>
@@ -100,12 +128,23 @@
   .chat-body {
     position: relative;
     height: 385px;
-    overflow-y: scroll;
+    margin-bottom: 5px;
+    overflow-y: auto;
     &::-webkit-scrollbar {
       width: 0;
       height: 0;
       -ms-overflow-style: none;
     }
+  }
+
+  .chat-messages {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    display: grid;
+    grid-template-rows: 1fr;
+    // - //fixme: scroll for grid end or js scrollTo?
+    // align-content: end;
   }
 
   .chat-input {
@@ -133,12 +172,5 @@
       border: none;
       border-radius: 50%;
     }
-  }
-
-  .chat-messages {
-    position: relative;
-    bottom: 0;
-    padding: 0.5rem;
-    display: grid;
   }
 </style>
