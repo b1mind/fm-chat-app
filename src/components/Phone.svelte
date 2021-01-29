@@ -2,34 +2,10 @@
   import User from './User.svelte'
   import Chat from './Chat.svelte'
   import { afterUpdate } from 'svelte'
+  import * as msgData from '../data/messages.json'
 
-  let msgs = [
-    {
-      user: false,
-      img: false,
-      imgs: [],
-      option: false,
-      msg: 'This is a msg',
-    },
-    {
-      user: true,
-      img: false,
-      imgs: [],
-      option: false,
-      msg: 'This is a user msg',
-    },
-    {
-      user: false,
-      img: true,
-      imgs: [
-        { url: 'https://picsum.photos/50/' },
-        { url: 'https://picsum.photos/50/' },
-        { url: 'https://picsum.photos/50/' },
-      ],
-      option: false,
-      msg: '',
-    },
-  ]
+  const data = JSON.stringify(msgData)
+  let msgs = JSON.parse(data).default
 
   let inputValue
   let chatMsgs
@@ -68,7 +44,12 @@
       <div class="chat-messages" bind:this={chatMsgs}>
         <b />
         {#each msgs as msg}
-          <Chat user={msg.user} img={msg.img} imgs={msg.imgs} option={msg.option}>
+          <Chat
+            user={msg.user}
+            img={msg.img}
+            imgs={msg.imgs}
+            option={msg.option}
+            price={msg.price}>
             {msg.msg}
           </Chat>
         {/each}
