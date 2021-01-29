@@ -1,12 +1,22 @@
 <script>
+  import { createEventDispatcher } from 'svelte'
+
   export let option = false
   export let user = false
   export let img = false
   export let imgs = []
   export let price = 420
+
+  const dispatch = createEventDispatcher()
+
+  function confirmMsg() {
+    dispatch('confirm', {
+      price: price,
+    })
+  }
 </script>
 
-<div class="chat-bubble" class:option class:user class:img>
+<div class="chat-bubble" class:option class:user class:img selectedOption>
   {#if user}
     <slot>That sounds like a great idea.</slot>
   {:else if img}
@@ -14,12 +24,12 @@
       <img src={img.url} alt="avatar" />
     {/each}
   {:else if option}
-    <label class="container">
+    <label class="container" on:click={confirmMsg}>
       <span class="radio-label">
         <slot>Entry package 1h</slot><span>{` $${price}`}</span>
       </span>
 
-      <input class="radio" name="option" type="radio" />
+      <input class="radio" name="option" type="radio" value={price} />
 
       <!-- prettier-ignore -->
       <span class="radio-control"></span>

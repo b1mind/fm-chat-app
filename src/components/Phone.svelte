@@ -7,23 +7,41 @@
   const data = JSON.stringify(msgData)
   let msgs = JSON.parse(data).default
 
-  let inputValue
-  let chatMsgs
+  let input
   let chatBody
+  let selectedOption
+  let hasOption = true
 
   function userInput(e) {
-    if (!inputValue) return
+    if (!input.value) return
 
     let msg = {
       user: true,
       img: false,
       imgs: [],
       option: false,
-      msg: inputValue,
+      msg: input.value,
+    }
+
+    if (!selectedOption) {
+      msg.user = false
+      msg.msg = 'Please select a package'
+    } else if (hasOption) {
+      msg.user = false
+      msg.msg = `Thank you for your purchase`
+      hasOption = false
     }
 
     msgs = [...msgs, msg]
-    inputValue = ''
+    input.value = ''
+  }
+
+  function confirmMsg(e) {
+    if (!hasOption) return
+
+    let value = e.detail.price
+    input.value = `Confirm $${value} payment`
+    selectedOption = value
   }
 
   afterUpdate(() => {
@@ -31,7 +49,6 @@
   })
 
   $: msgs
-  $: chatMsgs
 </script>
 
 <div class="phone-wrap">
@@ -41,22 +58,25 @@
     </div>
 
     <div class="chat-body" bind:this={chatBody}>
-      <div class="chat-messages" bind:this={chatMsgs}>
+      <div class="chat-messages">
         <b />
+
         {#each msgs as msg}
           <Chat
+            on:confirm={confirmMsg}
             user={msg.user}
             img={msg.img}
             imgs={msg.imgs}
             option={msg.option}
-            price={msg.price}>
+            price={msg.price}
+          >
             {msg.msg}
           </Chat>
         {/each}
       </div>
     </div>
     <div class="chat-input">
-      <input type="text" placeholder="type a message" bind:value={inputValue} />
+      <input type="text" placeholder="type a message" bind:this={input} />
 
       <b on:click={userInput}>&gt;</b>
     </div>
