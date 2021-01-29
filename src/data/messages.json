@@ -49,22 +49,22 @@
     "img": false,
     "imgs": [],
     "option": false,
-    "msg": "Sure thing please select a package to start."
+    "msg": "You bet! Please select a payment type and confirm."
   },
   {
     "user": false,
     "img": false,
     "imgs": [],
     "option": true,
-    "price": 69,
-    "msg": "Intro package 1h"
+    "price": 690,
+    "msg": "Starting payment"
   },
   {
     "user": false,
     "img": false,
     "imgs": [],
     "option": true,
-    "price": 420,
-    "msg": "Full package 8h"
+    "price": 4200,
+    "msg": "Full payment"
   }
 ]
