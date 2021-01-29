@@ -1,5 +1,14 @@
 Todo:
-  ☐ make chat bubbles
   ☐ make header with sliding 
-  ☐ make options picker
-  ☐ input working...?
+  ☐ start to animate the things
+  ✔ deploy script setup/run @done(21-01-29 13:15)
+
+Animate: 
+  ☐ intro - bring it all in
+  ☐ default bubble animation
+  ☐ phone intro chat timeline
+
+Archive:
+  ✔ make chat bubbles @done(21-01-29 13:11) @project(Todo)
+  ✔ make options picker @done(21-01-29 13:11) @project(Todo)
+  ✔ input working...? @done(21-01-29 13:11) @project(Todo)
