@@ -1,0 +1,70 @@
+[
+  {
+    "user": false,
+    "img": false,
+    "imgs": [],
+    "option": false,
+    "msg": "Sounds like a great idea."
+  },
+  {
+    "user": false,
+    "img": false,
+    "imgs": [],
+    "option": false,
+    "msg": "Can you send me any pictures or story boards?"
+  },
+  {
+    "user": false,
+    "img": true,
+    "imgs": [
+      {
+        "url": "https://picsum.photos/50/"
+      },
+      {
+        "url": "https://picsum.photos/50/"
+      },
+      {
+        "url": "https://picsum.photos/50/"
+      }
+    ],
+    "option": false,
+    "msg": ""
+  },
+  {
+    "user": true,
+    "img": false,
+    "imgs": [],
+    "option": false,
+    "msg": "Here is what we were thinking"
+  },
+  {
+    "user": true,
+    "img": false,
+    "imgs": [],
+    "option": false,
+    "msg": "Can we get started asap?"
+  },
+  {
+    "user": false,
+    "img": false,
+    "imgs": [],
+    "option": false,
+    "msg": "Sure thing please select a package to start."
+  },
+  {
+    "user": false,
+    "img": false,
+    "imgs": [],
+    "option": true,
+    "price": 69,
+    "msg": "Intro package 1h"
+  },
+  {
+    "user": false,
+    "img": false,
+    "imgs": [],
+    "option": true,
+    "price": 420,
+    "msg": "Full package 8h"
+  }
+]
