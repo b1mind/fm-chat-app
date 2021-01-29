@@ -64,7 +64,7 @@
       background: linear-gradient(var(--clr), var(--clr-two));
       z-index: -20;
       @media (max-width: 980px) {
-        height: 700px;
+        height: 625px;
       }
     }
 
@@ -78,6 +78,9 @@
       border-radius: 400px 400px 0 0;
       background: var(--clr-light);
       z-index: -1;
+      @media (max-width: 980px) {
+        height: 625px;
+      }
     }
   }
 

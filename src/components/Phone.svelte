@@ -1,6 +1,34 @@
 <script>
   import User from './User.svelte'
   import Chat from './Chat.svelte'
+
+  let msgs = [
+    {
+      user: false,
+      img: false,
+      imgs: [],
+      option: false,
+      msg: 'This is a msg',
+    },
+    {
+      user: true,
+      img: false,
+      imgs: [],
+      option: false,
+      msg: 'This is a user msg',
+    },
+    {
+      user: false,
+      img: true,
+      imgs: [
+        { url: 'https://picsum.photos/50/' },
+        { url: 'https://picsum.photos/50/' },
+        { url: 'https://picsum.photos/50/' },
+      ],
+      option: false,
+      msg: '',
+    },
+  ]
 </script>
 
 <div class="phone-wrap">
@@ -10,9 +38,14 @@
     </div>
 
     <div class="chat-body">
-      <Chat />
+      <div class="chat-messages">
+        {#each msgs as msg}
+          <Chat user={msg.user} img={msg.img} imgs={msg.imgs} option={msg.option}>
+            {msg.msg}
+          </Chat>
+        {/each}
+      </div>
     </div>
-
     <div class="chat-input">
       <input type="text" placeholder="type a message" />
 
@@ -100,5 +133,12 @@
       border: none;
       border-radius: 50%;
     }
+  }
+
+  .chat-messages {
+    position: relative;
+    bottom: 0;
+    padding: 0.5rem;
+    display: grid;
   }
 </style>
