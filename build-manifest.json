@@ -9,7 +9,7 @@
       "imports": []
     },
     "src/App.css": {
-      "bytes": 1109,
+      "bytes": 1139,
       "imports": []
     },
     "web_modules/common/index-a6ffbdca.js": {
@@ -111,7 +111,7 @@
       ]
     },
     "src/App.js": {
-      "bytes": 2887,
+      "bytes": 2893,
       "imports": [
         {
           "path": "src/App.css"
@@ -201,19 +201,19 @@
           "bytesInOutput": 3066
         },
         "src/App.js": {
-          "bytesInOutput": 1001
+          "bytesInOutput": 1007
         },
         "src/index.js": {
           "bytesInOutput": 122
         }
       },
-      "bytes": 76249
+      "bytes": 76255
     },
     "../node_modules/.cache/snowpack/~~bundle~~/src/index.css": {
       "imports": [],
       "inputs": {
         "src/App.css": {
-          "bytesInOutput": 1111
+          "bytesInOutput": 1141
         },
         "src/components/Phone.css": {
           "bytesInOutput": 1564
@@ -225,7 +225,7 @@
           "bytesInOutput": 838
         }
       },
-      "bytes": 5403
+      "bytes": 5433
     }
   }
 }
