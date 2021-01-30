@@ -1,7 +1,7 @@
 {
   "inputs": {
     "global.css": {
-      "bytes": 734,
+      "bytes": 705,
       "imports": []
     },
     "__snowpack__/env.js": {
@@ -12,15 +12,15 @@
       "bytes": 1090,
       "imports": []
     },
-    "web_modules/common/index-a6ffbdca.js": {
-      "bytes": 16755,
+    "web_modules/common/index-439454cc.js": {
+      "bytes": 16952,
       "imports": []
     },
     "web_modules/svelte/internal.js": {
-      "bytes": 537,
+      "bytes": 573,
       "imports": [
         {
-          "path": "web_modules/common/index-a6ffbdca.js"
+          "path": "web_modules/common/index-439454cc.js"
         }
       ]
     },
@@ -28,7 +28,7 @@
       "bytes": 105,
       "imports": [
         {
-          "path": "web_modules/common/index-a6ffbdca.js"
+          "path": "web_modules/common/index-439454cc.js"
         }
       ]
     },
@@ -37,7 +37,7 @@
       "imports": []
     },
     "src/components/Phone.css": {
-      "bytes": 1567,
+      "bytes": 1535,
       "imports": []
     },
     "src/components/User.css": {
@@ -85,7 +85,7 @@
       "imports": []
     },
     "src/components/Phone.js": {
-      "bytes": 8547,
+      "bytes": 8713,
       "imports": [
         {
           "path": "src/components/Phone.css"
@@ -111,7 +111,7 @@
       ]
     },
     "src/App.js": {
-      "bytes": 2895,
+      "bytes": 2899,
       "imports": [
         {
           "path": "src/App.css"
@@ -147,10 +147,10 @@
       "imports": [],
       "inputs": {
         "global.css": {
-          "bytesInOutput": 462
+          "bytesInOutput": 438
         }
       },
-      "bytes": 567
+      "bytes": 543
     },
     "../node_modules/.cache/snowpack/~~bundle~~/src/index.js": {
       "imports": [],
@@ -164,8 +164,8 @@
         "src/App.css": {
           "bytesInOutput": 0
         },
-        "web_modules/common/index-a6ffbdca.js": {
-          "bytesInOutput": 6033
+        "web_modules/common/index-439454cc.js": {
+          "bytesInOutput": 6109
         },
         "web_modules/svelte/internal.js": {
           "bytesInOutput": 0
@@ -198,16 +198,16 @@
           "bytesInOutput": 524
         },
         "src/components/Phone.js": {
-          "bytesInOutput": 3050
+          "bytesInOutput": 3087
         },
         "src/App.js": {
-          "bytesInOutput": 1009
+          "bytesInOutput": 1013
         },
         "src/index.js": {
           "bytesInOutput": 122
         }
       },
-      "bytes": 76095
+      "bytes": 76212
     },
     "../node_modules/.cache/snowpack/~~bundle~~/src/index.css": {
       "imports": [],
@@ -216,7 +216,7 @@
           "bytesInOutput": 1092
         },
         "src/components/Phone.css": {
-          "bytesInOutput": 1564
+          "bytesInOutput": 1532
         },
         "src/components/Chat.css": {
           "bytesInOutput": 1864
@@ -225,7 +225,7 @@
           "bytesInOutput": 840
         }
       },
-      "bytes": 5361
+      "bytes": 5329
     }
   }
 }
