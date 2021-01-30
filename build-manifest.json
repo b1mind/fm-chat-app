@@ -9,7 +9,7 @@
       "imports": []
     },
     "src/App.css": {
-      "bytes": 1139,
+      "bytes": 1090,
       "imports": []
     },
     "web_modules/common/index-a6ffbdca.js": {
@@ -41,7 +41,7 @@
       "imports": []
     },
     "src/components/User.css": {
-      "bytes": 843,
+      "bytes": 845,
       "imports": []
     },
     "src/components/User.js": {
@@ -85,7 +85,7 @@
       "imports": []
     },
     "src/components/Phone.js": {
-      "bytes": 8548,
+      "bytes": 8547,
       "imports": [
         {
           "path": "src/components/Phone.css"
@@ -111,7 +111,7 @@
       ]
     },
     "src/App.js": {
-      "bytes": 2900,
+      "bytes": 2895,
       "imports": [
         {
           "path": "src/App.css"
@@ -198,22 +198,22 @@
           "bytesInOutput": 524
         },
         "src/components/Phone.js": {
-          "bytesInOutput": 3051
+          "bytesInOutput": 3050
         },
         "src/App.js": {
-          "bytesInOutput": 1014
+          "bytesInOutput": 1009
         },
         "src/index.js": {
           "bytesInOutput": 122
         }
       },
-      "bytes": 76101
+      "bytes": 76095
     },
     "../node_modules/.cache/snowpack/~~bundle~~/src/index.css": {
       "imports": [],
       "inputs": {
         "src/App.css": {
-          "bytesInOutput": 1141
+          "bytesInOutput": 1092
         },
         "src/components/Phone.css": {
           "bytesInOutput": 1564
@@ -222,10 +222,10 @@
           "bytesInOutput": 1864
         },
         "src/components/User.css": {
-          "bytesInOutput": 838
+          "bytesInOutput": 840
         }
       },
-      "bytes": 5408
+      "bytes": 5361
     }
   }
 }
