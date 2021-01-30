@@ -111,7 +111,7 @@
       ]
     },
     "src/App.js": {
-      "bytes": 2893,
+      "bytes": 2900,
       "imports": [
         {
           "path": "src/App.css"
@@ -201,13 +201,13 @@
           "bytesInOutput": 3066
         },
         "src/App.js": {
-          "bytesInOutput": 1007
+          "bytesInOutput": 1014
         },
         "src/index.js": {
           "bytesInOutput": 122
         }
       },
-      "bytes": 76255
+      "bytes": 76262
     },
     "../node_modules/.cache/snowpack/~~bundle~~/src/index.css": {
       "imports": [],
