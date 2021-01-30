@@ -28,12 +28,13 @@
   .user {
     padding: 10px 15px;
     display: grid;
-    grid-template-columns: 1fr 1fr 10fr 1fr;
+    grid-template-columns: 1fr 1fr 100fr 1fr;
     gap: 0.5rem;
     align-items: center;
 
     b {
-      justify-self: center;
+      padding: 0 3px;
+      cursor: pointer;
     }
 
     &-avatar {
@@ -67,9 +68,9 @@
 
   .menu {
     width: 5px;
+    padding: 0 5px;
     display: grid;
     gap: 2px;
-    justify-self: flex-end;
     cursor: pointer;
 
     li {

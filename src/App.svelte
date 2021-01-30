@@ -1,14 +1,18 @@
 <script>
+  import { onMount } from 'svelte'
+  import { gsap } from 'gsap'
   import Phone from './components/Phone.svelte'
 
+  let main
+
+  //fixme: mousemove animation not quite working
   /*   function movePhone(e) {
+    const clientHeight = main.clientHeight
+    const clientWidth = main.clientWidth
     const { offsetX, offsetY, target } = e
-    const { clientWidth, clientHeight } = target
-    console.dir(e.target)
 
     const xPos = offsetX / clientWidth - 0.5
     const yPos = offsetY / clientHeight - 0.5
-    const modifier = (dex) => dex * 1.2 + 0.5
 
     gsap.to('.phone-wrap', {
       duration: 1,
@@ -19,17 +23,29 @@
       ease: 'power3.out',
     })
   } */
+
+  onMount(() => {
+    const heroItems = main.firstChild.children
+    const tlIntro = gsap.timeline({
+      defaults: { duration: 0.5 },
+    })
+
+    tlIntro
+      .from(heroItems[1].children, { autoAlpha: 0, y: 100, stagger: -0.3 })
+      .from(heroItems[0], { autoAlpha: 0, x: 200 })
+  })
 </script>
 
-<main>
+<!-- <main on:mousemove|stopPropagation={movePhone}> -->
+<main bind:this={main}>
   <div class="hero">
     <Phone />
     <div class="hero-text">
       <h1>Book with Us</h1>
       <p>
-        Stay in touch with this amazing Svelte app by booking a appointment. Play around
-        as there maybe many fun working features to this challenge by Kevin Powell based
-        on Frontend Mentors
+        Play with this interactive booking chat app demo made with Svelte. This layout was
+        a challenge from Kevin Powell to his Demystified CSS class based on a
+        FrontendMentors design.
       </p>
     </div>
   </div>
@@ -44,13 +60,12 @@
   main {
     position: relative;
     margin: 0 auto;
-    max-width: $max;
     min-height: 920px;
     display: grid;
     place-content: center;
     background-color: var(--clr-gray);
     overflow: hidden;
-    perspective: 1000px;
+    perspective: 1900px;
     z-index: 0;
 
     &::before {
@@ -63,7 +78,7 @@
       border-radius: 0 0 400px 400px;
       background: linear-gradient(var(--clr), var(--clr-two));
       z-index: -20;
-      @media (max-width: 980px) {
+      @media (max-width: 1080px) {
         height: 625px;
       }
     }
@@ -78,7 +93,7 @@
       border-radius: 400px 400px 0 0;
       background: var(--clr-light);
       z-index: -1;
-      @media (max-width: 980px) {
+      @media (max-width: 1080px) {
         height: 625px;
       }
     }
@@ -89,7 +104,6 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    place-content: center;
 
     &-text {
       max-width: 45ch;
@@ -98,11 +112,11 @@
       font-size: 1.05rem;
     }
 
-    @media (max-width: 980px) {
+    @media (max-width: 1080px) {
       width: 100%;
       padding: 1rem;
       grid-template-columns: 1fr;
-      place-items: center;
+      justify-items: center;
     }
   }
 
@@ -113,7 +127,7 @@
   }
 
   p {
-    color: #9d9d9d;
+    color: #797979;
   }
 
   //< end me

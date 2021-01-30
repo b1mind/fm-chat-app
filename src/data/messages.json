@@ -1,70 +1,44 @@
 [
   {
-    "user": false,
-    "img": false,
-    "imgs": [],
-    "option": false,
     "msg": "Sounds like a great idea."
   },
   {
-    "user": false,
-    "img": false,
-    "imgs": [],
-    "option": false,
     "msg": "Can you send me any pictures or story boards?"
   },
   {
-    "user": false,
     "img": true,
     "imgs": [
       {
-        "url": "https://picsum.photos/50/"
+        "url": "https://picsum.photos/50/50?random=1"
       },
       {
-        "url": "https://picsum.photos/50/"
+        "url": "https://picsum.photos/50/50?random=2"
       },
       {
-        "url": "https://picsum.photos/50/"
+        "url": "https://picsum.photos/50/50?random=3"
       }
     ],
-    "option": false,
     "msg": ""
   },
   {
     "user": true,
-    "img": false,
-    "imgs": [],
-    "option": false,
     "msg": "Here is what we were thinking"
   },
   {
     "user": true,
-    "img": false,
-    "imgs": [],
-    "option": false,
     "msg": "Can we get started asap?"
   },
   {
-    "user": false,
-    "img": false,
-    "imgs": [],
-    "option": false,
-    "msg": "Sure thing please select a package to start."
+    "msg": "You bet! Please select a payment type and confirm."
   },
   {
-    "user": false,
-    "img": false,
-    "imgs": [],
     "option": true,
-    "price": 69,
-    "msg": "Intro package 1h"
+    "price": 690,
+    "msg": "Starting payment"
   },
   {
-    "user": false,
-    "img": false,
-    "imgs": [],
     "option": true,
-    "price": 420,
-    "msg": "Full package 8h"
+    "price": 4200,
+    "msg": "Full payment"
   }
 ]

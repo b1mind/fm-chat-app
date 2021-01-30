@@ -1,5 +1,6 @@
 <script>
   import { createEventDispatcher } from 'svelte'
+  import { fly } from 'svelte/transition'
 
   export let option = false
   export let user = false
@@ -16,12 +17,19 @@
   }
 </script>
 
-<div class="chat-bubble" class:option class:user class:img selectedOption>
+<div
+  class="chat-bubble"
+  in:fly={{ duration: 750, y: 20 }}
+  class:option
+  class:user
+  class:img
+  selectedOption
+>
   {#if user}
     <slot>That sounds like a great idea.</slot>
   {:else if img}
     {#each imgs as img}
-      <img src={img.url} alt="avatar" />
+      <img src={img.url} width="50px" height="50px" alt="avatar" />
     {/each}
   {:else if option}
     <label class="container" on:click={confirmMsg}>
@@ -48,8 +56,9 @@
     height: min-content;
     margin: 0.25rem 0;
     padding: 0.5rem;
-    color: var(--clr);
-    font-size: 0.55rem;
+    color: var(--clr-two-dark);
+    font-size: 0.6rem;
+    font-weight: 600;
     background-color: var(--clr-two-gray);
     border-radius: 10px 10px 10px 3px;
   }

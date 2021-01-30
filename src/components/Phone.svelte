@@ -1,7 +1,8 @@
 <script>
+  import gsap from 'gsap'
   import User from './User.svelte'
   import Chat from './Chat.svelte'
-  import { afterUpdate } from 'svelte'
+  import { afterUpdate, onMount } from 'svelte'
   import * as msgData from '../data/messages.json'
 
   const data = JSON.stringify(msgData)
@@ -9,17 +10,16 @@
 
   let input
   let chatBody
+  let chatMessagesBody
   let selectedOption
   let hasOption = true
+  let isAnimated = true
 
   function userInput(e) {
     if (!input.value) return
 
-    let msg = {
+    const msg = {
       user: true,
-      img: false,
-      imgs: [],
-      option: false,
       msg: input.value,
     }
 
@@ -28,7 +28,7 @@
       msg.msg = 'Please select a package'
     } else if (hasOption) {
       msg.user = false
-      msg.msg = `Thank you for your purchase`
+      msg.msg = `Thank you, invoice and contract will be emailed.`
       hasOption = false
     }
 
@@ -39,10 +39,24 @@
   function confirmMsg(e) {
     if (!hasOption) return
 
-    let value = e.detail.price
+    const value = e.detail.price
     input.value = `Confirm $${value} payment`
     selectedOption = value
   }
+
+  onMount(() => {
+    const chatMessages = chatMessagesBody.children
+    gsap.from(chatMessages, {
+      display: 'none',
+      duration: 0.5,
+      autoAlpha: 0,
+      y: 20,
+      stagger: 1.2,
+      onComplete: () => {
+        isAnimated = false
+      },
+    })
+  })
 
   afterUpdate(() => {
     chatBody.scrollTo(0, 999999)
@@ -58,7 +72,7 @@
     </div>
 
     <div class="chat-body" bind:this={chatBody}>
-      <div class="chat-messages">
+      <div class="chat-messages" bind:this={chatMessagesBody}>
         <b />
 
         {#each msgs as msg}
@@ -75,11 +89,16 @@
         {/each}
       </div>
     </div>
-    <div class="chat-input">
-      <input type="text" placeholder="type a message" bind:this={input} />
+    <label class="chat-input">
+      <input
+        type="text"
+        placeholder="type a message"
+        bind:this={input}
+        disabled={isAnimated}
+      />
 
       <b on:click={userInput}>&gt;</b>
-    </div>
+    </label>
   </div>
 </div>
 
