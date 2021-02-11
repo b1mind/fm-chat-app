@@ -41,11 +41,11 @@
       "imports": []
     },
     "src/components/User.css": {
-      "bytes": 845,
+      "bytes": 829,
       "imports": []
     },
     "src/components/User.js": {
-      "bytes": 2713,
+      "bytes": 2766,
       "imports": [
         {
           "path": "src/components/User.css"
@@ -56,7 +56,7 @@
       ]
     },
     "src/components/Chat.css": {
-      "bytes": 1886,
+      "bytes": 1872,
       "imports": []
     },
     "web_modules/svelte/transition.js": {
@@ -64,7 +64,7 @@
       "imports": []
     },
     "src/components/Chat.js": {
-      "bytes": 11172,
+      "bytes": 11165,
       "imports": [
         {
           "path": "src/components/Chat.css"
@@ -183,7 +183,7 @@
           "bytesInOutput": 0
         },
         "src/components/User.js": {
-          "bytesInOutput": 1165
+          "bytesInOutput": 1196
         },
         "src/components/Chat.css": {
           "bytesInOutput": 0
@@ -192,7 +192,7 @@
           "bytesInOutput": 334
         },
         "src/components/Chat.js": {
-          "bytesInOutput": 3312
+          "bytesInOutput": 3305
         },
         "src/data/messages.json.proxy.js": {
           "bytesInOutput": 524
@@ -207,7 +207,7 @@
           "bytesInOutput": 122
         }
       },
-      "bytes": 76162
+      "bytes": 76186
     },
     "../node_modules/.cache/snowpack/~~bundle~~/src/index.css": {
       "imports": [],
@@ -219,13 +219,13 @@
           "bytesInOutput": 1532
         },
         "src/components/Chat.css": {
-          "bytesInOutput": 1879
+          "bytesInOutput": 1865
         },
         "src/components/User.css": {
-          "bytesInOutput": 840
+          "bytesInOutput": 824
         }
       },
-      "bytes": 5344
+      "bytes": 5314
     }
   }
 }
