@@ -2,7 +2,7 @@
   export let user = {
     name: 'Brent Morton',
     title: 'available for work',
-    avatar: 'https://picsum.photos/35/',
+    avatar: 'https://picsum.photos/25/',
   }
 </script>
 
@@ -10,7 +10,7 @@
   <b>&lt;</b>
 
   <div class="user-avatar">
-    <img src={user.avatar} alt="avatar" />
+    <img src="{user.avatar}" alt="avatar" width="25px" height="25px" />
   </div>
 
   <div class="user-title">
@@ -19,9 +19,9 @@
   </div>
 
   <ul class="menu">
-    <li />
-    <li />
-    <li />
+    <li></li>
+    <li></li>
+    <li></li>
   </ul>
 </div>
 
@@ -39,8 +39,8 @@
     }
 
     &-avatar {
-      width: 30px;
-      height: 30px;
+      width: 25px;
+      height: 25px;
       border: 2px solid var(--clr-white);
       border-radius: 50%;
       overflow: hidden;

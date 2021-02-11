@@ -29,7 +29,7 @@
     <slot>That sounds like a great idea.</slot>
   {:else if img}
     {#each imgs as img}
-      <img src="{img.url}" alt="avatar" />
+      <img src="{img.url}" alt="avatar" width="50px" height="50px" />
     {/each}
   {:else if option}
     <label class="container" on:click="{confirmMsg}">
@@ -39,6 +39,7 @@
 
       <input class="radio" name="option" type="radio" value="{price}" />
 
+      <!-- prettier-ignore -->
       <span class="radio-control"></span>
     </label>
   {:else}
@@ -55,8 +56,9 @@
     height: min-content;
     margin: 0.25rem 0;
     padding: 0.5rem;
-    color: var(--clr);
-    font-size: 0.55rem;
+    color: var(--clr-two-dark);
+    font-size: 0.6rem;
+    font-weight: 600;
     background-color: var(--clr-two-gray);
     border-radius: 10px 10px 10px 3px;
   }

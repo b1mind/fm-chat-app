@@ -37,7 +37,7 @@
 </script>
 
 <!-- <main on:mousemove|stopPropagation={movePhone}> -->
-<main bind:this={main}>
+<main bind:this="{main}">
   <div class="hero">
     <Phone />
     <div class="hero-text">
@@ -51,6 +51,7 @@
   </div>
 </main>
 
+<!-- <main on:mousemove|stopPropagation={movePhone}> -->
 <style lang="scss">
   //< style more
 
@@ -127,7 +128,7 @@
   }
 
   p {
-    color: #797979;
+    color: #737373;
   }
 
   //< end me

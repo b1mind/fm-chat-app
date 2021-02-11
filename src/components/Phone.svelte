@@ -29,6 +29,7 @@
     } else if (hasOption) {
       msg.user = false
       msg.msg = `Thank you, invoice and contract will be emailed.`
+      hasOption = false
     }
 
     msgs = [...msgs, msg]
@@ -91,7 +92,7 @@
     </div>
 
     <form class="chat-input" on:submit|preventDefault={userInput}>
-      <label for="text">
+      <label>
         <input
           type="text"
           placeholder="type a message"
