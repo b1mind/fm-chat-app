@@ -56,7 +56,7 @@
       ]
     },
     "src/components/Chat.css": {
-      "bytes": 1872,
+      "bytes": 1871,
       "imports": []
     },
     "web_modules/svelte/transition.js": {
@@ -219,13 +219,13 @@
           "bytesInOutput": 1532
         },
         "src/components/Chat.css": {
-          "bytesInOutput": 1865
+          "bytesInOutput": 1864
         },
         "src/components/User.css": {
           "bytesInOutput": 824
         }
       },
-      "bytes": 5314
+      "bytes": 5313
     }
   }
 }
