@@ -41,11 +41,11 @@
   <div class="hero">
     <Phone />
     <div class="hero-text">
-      <h1>Book with Us</h1>
+      <h1>Book A Project</h1>
       <p>
         Play with this interactive booking chat app demo made with Svelte. This layout was
-        a challenge from Kevin Powell to his Demystified CSS class based on a
-        FrontendMentors design.
+        a challenge from Kevin Powell to our Demystified CSS class. (based on a
+        FrontendMentors design)
       </p>
     </div>
   </div>

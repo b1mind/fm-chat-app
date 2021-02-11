@@ -1,14 +1,16 @@
 Todo:
-  ☐ make header with sliding 
-  ☐ start to animate the things
-  ✔ deploy script setup/run @done(21-01-29 13:15)
+  ☐ make header with sliding menu
+  ☐ options menu
 
-Animate: 
-  ☐ intro - bring it all in
-  ☐ default bubble animation
-  ☐ phone intro chat timeline
+Wishlist: 
+  ☐ scroll trigger to make chat run?
 
 Archive:
+  ✔ start to animate the things @done(21-01-30 16:03) @project(Todo)
+  ✔ deploy script setup/run @done(21-01-29 13:15) @project(Todo)
+  ✔ intro - bring it all in @done(21-01-30 16:03) @project(Animate)
+  ✔ default bubble animation @done(21-01-30 16:03) @project(Animate)
+  ✔ phone intro chat timeline @done(21-01-30 16:03) @project(Animate)
   ✔ make chat bubbles @done(21-01-29 13:11) @project(Todo)
   ✔ make options picker @done(21-01-29 13:11) @project(Todo)
   ✔ input working...? @done(21-01-29 13:11) @project(Todo)

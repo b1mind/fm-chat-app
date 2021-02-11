@@ -17,6 +17,7 @@
     <h2>{user.name}</h2>
     <h3>{user.title}</h3>
   </div>
+
   <ul class="menu">
     <li />
     <li />

@@ -19,7 +19,7 @@
 
 <div
   class="chat-bubble"
-  in:fly={{ duration: 750, y: 20 }}
+  in:fly="{{ y: 20 }}"
   class:option
   class:user
   class:img
@@ -29,17 +29,16 @@
     <slot>That sounds like a great idea.</slot>
   {:else if img}
     {#each imgs as img}
-      <img src={img.url} width="50px" height="50px" alt="avatar" />
+      <img src="{img.url}" alt="avatar" />
     {/each}
   {:else if option}
-    <label class="container" on:click={confirmMsg}>
+    <label class="container" on:click="{confirmMsg}">
       <span class="radio-label">
         <slot>Entry package 1h</slot><span>{` $${price}`}</span>
       </span>
 
-      <input class="radio" name="option" type="radio" value={price} />
+      <input class="radio" name="option" type="radio" value="{price}" />
 
-      <!-- prettier-ignore -->
       <span class="radio-control"></span>
     </label>
   {:else}
@@ -56,9 +55,8 @@
     height: min-content;
     margin: 0.25rem 0;
     padding: 0.5rem;
-    color: var(--clr-two-dark);
-    font-size: 0.6rem;
-    font-weight: 600;
+    color: var(--clr);
+    font-size: 0.55rem;
     background-color: var(--clr-two-gray);
     border-radius: 10px 10px 10px 3px;
   }

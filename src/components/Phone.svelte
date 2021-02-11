@@ -29,7 +29,6 @@
     } else if (hasOption) {
       msg.user = false
       msg.msg = `Thank you, invoice and contract will be emailed.`
-      hasOption = false
     }
 
     msgs = [...msgs, msg]
@@ -46,6 +45,7 @@
 
   onMount(() => {
     const chatMessages = chatMessagesBody.children
+
     gsap.from(chatMessages, {
       display: 'none',
       duration: 0.5,
@@ -89,25 +89,24 @@
         {/each}
       </div>
     </div>
-    <label class="chat-input">
-      <input
-        type="text"
-        placeholder="type a message"
-        bind:this={input}
-        disabled={isAnimated}
-      />
+
+    <form class="chat-input" on:submit|preventDefault={userInput}>
+      <label for="text">
+        <input
+          type="text"
+          placeholder="type a message"
+          bind:this={input}
+          disabled={isAnimated}
+        />
+      </label>
 
       <b on:click={userInput}>&gt;</b>
-    </label>
+    </form>
   </div>
 </div>
 
 <style type="text/scss">
   //style like its 1999
-
-  b {
-    cursor: pointer;
-  }
 
   .phone-wrap {
     width: min-content;
@@ -191,6 +190,7 @@
       background-color: var(--clr-two-dark);
       border: none;
       border-radius: 50%;
+      cursor: pointer;
     }
   }
 </style>
