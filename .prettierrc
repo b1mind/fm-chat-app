@@ -2,7 +2,6 @@
   "svelteSortOrder": "scripts-markup-styles",
   "svelteBracketNewLine": true,
   "svelteAllowShorthand": true,
-  "svelteStrictMode": true,
   "trailingComma": "all",
   "semi": false,
   "singleQuote": true,
