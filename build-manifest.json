@@ -85,7 +85,7 @@
       "imports": []
     },
     "src/components/Phone.js": {
-      "bytes": 8747,
+      "bytes": 8769,
       "imports": [
         {
           "path": "src/components/Phone.css"
@@ -198,7 +198,7 @@
           "bytesInOutput": 524
         },
         "src/components/Phone.js": {
-          "bytesInOutput": 3118
+          "bytesInOutput": 3116
         },
         "src/App.js": {
           "bytesInOutput": 1013
@@ -207,7 +207,7 @@
           "bytesInOutput": 122
         }
       },
-      "bytes": 76274
+      "bytes": 76272
     },
     "../node_modules/.cache/snowpack/~~bundle~~/src/index.css": {
       "imports": [],
