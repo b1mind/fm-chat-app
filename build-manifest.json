@@ -64,7 +64,7 @@
       "imports": []
     },
     "src/components/Chat.js": {
-      "bytes": 11165,
+      "bytes": 11232,
       "imports": [
         {
           "path": "src/components/Chat.css"
@@ -85,7 +85,7 @@
       "imports": []
     },
     "src/components/Phone.js": {
-      "bytes": 8672,
+      "bytes": 8747,
       "imports": [
         {
           "path": "src/components/Phone.css"
@@ -192,13 +192,13 @@
           "bytesInOutput": 334
         },
         "src/components/Chat.js": {
-          "bytesInOutput": 3305
+          "bytesInOutput": 3346
         },
         "src/data/messages.json.proxy.js": {
           "bytesInOutput": 524
         },
         "src/components/Phone.js": {
-          "bytesInOutput": 3071
+          "bytesInOutput": 3118
         },
         "src/App.js": {
           "bytesInOutput": 1013
@@ -207,7 +207,7 @@
           "bytesInOutput": 122
         }
       },
-      "bytes": 76186
+      "bytes": 76274
     },
     "../node_modules/.cache/snowpack/~~bundle~~/src/index.css": {
       "imports": [],
